@@ -1,7 +1,10 @@
 <div class="main">
   <div><input type="email" class="email" id="email" placeholder="EMail" size="30"></div>
+  <div class="container1" #container1></div>
   <div><input class="userPassword" id="userPassword" placeholder="Password (***)" type="password" min="4"></div>
-  <div><input class="userPassword2" id="userPassword2" placeholder="Repeat Password (***)" type="password" min="4">
+  <div class="container2" #container2></div>
+  <div><input class="userPassword2" id="userPassword2" (blur)="this.onblurValidation()" placeholder="Repeat Password (***)" type="password" min="4">
   </div>
-  <button #btn name="register">Register</button>
+  <div class="container3" #container3></div>
+  <button [disabled]="!isAllInputField" #btn name="register">Register</button>
 </div>
